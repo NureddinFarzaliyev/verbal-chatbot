@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 
-function App() {
-  useEffect(() => {
-    console.log('useffect')
-  }, []);
 
+import SpeechRecognition from './components/speechRecognition';
+
+function App() {
   return (
-    <>
-    <div>Hello</div>
-    </>
+    <div>
+      <SpeechRecognition/> 
+    </div>
   );
 }
 
