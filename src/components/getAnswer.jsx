@@ -45,7 +45,8 @@ const GetAnswer = ( { prompt } ) => {
   
   return (
       <>
-        <button onClick={sendRequest}>Send</button>
+        <button onClick={sendRequest} className='hidden'>Send</button> {/* HIDDEN */ }
+        <div>{prompt}</div>
         <div>{answer}</div>
         <TextToSpeech prompt={answer} />
       </>
