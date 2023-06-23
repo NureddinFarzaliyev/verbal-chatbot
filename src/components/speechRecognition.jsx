@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import GetAnswer from './getAnswer';
+
 let recognition = null;
 
 const SpeechRecognition = () => {
@@ -42,6 +44,7 @@ const SpeechRecognition = () => {
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
             <p>{prompt}</p>
+            <GetAnswer prompt={prompt}/>
       </div>
     )
 }
