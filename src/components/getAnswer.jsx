@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-
+import TextToSpeech from './textToSpeech';
 
 const GetAnswer = ( { prompt } ) => {
 
@@ -36,25 +36,18 @@ const GetAnswer = ( { prompt } ) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data.choices[0].message.content);
         setAnswer(data.choices[0].message.content);
       })
       .catch((error) => {
         console.error(error);
       });
   }
-
-
-  useEffect(() => {
-
-    console.log('useffec')
-
-  }, [])
   
   return (
       <>
         <button onClick={sendRequest}>Send</button>
         <div>{answer}</div>
+        <TextToSpeech prompt={answer} />
       </>
     );  
 
