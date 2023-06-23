@@ -6,10 +6,10 @@ let recognition = null;
 
 const SpeechRecognition = () => {
     const [prompt, setPrompt] = useState('');
-    const [isListening, setIsListening] = useState(false)
+    // const [isListening, setIsListening] = useState(false)
     
     const handleStart = () => {
-        if(!isListening) {
+        // if(!isListening) {
             recognition = new window.webkitSpeechRecognition();
 
             // recognition.continuous = true;
@@ -23,26 +23,26 @@ const SpeechRecognition = () => {
             };
 
             recognition.start();
-            setIsListening(true);
-        }
+            // setIsListening(true);
+        // }
     }
 
-    const handleStop = () => {
-        if (isListening && recognition) {
-          recognition.stop();
-          setIsListening(false);
-        }else{
-            console.log('else happened')
-        }
+    // const handleStop = () => {
+    //     if (isListening && recognition) {
+    //       recognition.stop();
+    //       setIsListening(false);
+    //     }else{
+    //         console.log('else happened')
+    //     }
 
-        console.log(prompt)
-    };
+    //     console.log(prompt)
+    // };
 
     return (
         <div>
             <h1>hi</h1>
             <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
+            {/* <button onClick={handleStop}>Stop</button> */}
             <p>{prompt}</p>
             <GetAnswer prompt={prompt}/>
       </div>
