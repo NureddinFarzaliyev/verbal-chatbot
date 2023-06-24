@@ -19,7 +19,7 @@ const GetAnswer = ( { prompt } ) => {
       },
       {
         role: 'user',
-        content: 'why are you not working?', // Add prompt here
+        content: prompt, // Add prompt here
       },
     ],
     });

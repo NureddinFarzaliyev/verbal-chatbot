@@ -6,7 +6,6 @@ let recognition = null;
 
 const SpeechRecognition = () => {
     const [prompt, setPrompt] = useState('');
-    // const [isListening, setIsListening] = useState(false)
     
     const handleStart = () => {
         if('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
@@ -26,7 +25,6 @@ const SpeechRecognition = () => {
 
             recognition.start();
             console.log('speech recognition started')
-            // setIsListening(true)
 
             recognition.onend = () => {
                 console.log('ended')

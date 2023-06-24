@@ -11,7 +11,6 @@ const TextToSpeech = ( {prompt} ) => {
         utterance.voice = voices;
         utterance.text = prompt
         speechSynthesis.speak(utterance)
-        console.log('spoken')
       }else{
         console.log('else happened?')
       }

@@ -12,10 +12,6 @@ const Nav = () => {
             <a href='https://www.github.com/nureddinfarzaliyev' target='blank' className='text-[0.75rem] opacity-70 italic'>created by Nureddin Farzaliyev</a>
         </div>
         <div className='hidden md:flex'>
-            {/* <button className='flex items-center justify-between px-4 w-[8rem] rounded-lg h-[3rem] bg-[#a9a9a9] opacity-60 hover:opacity-100 transition text-black font-bold shadow-md text-xl'>
-                <img src="/images/icon-question-circle.svg" alt="" />
-                <p className='text-black'>Help</p>
-            </button> */}
             <a href='https://www.github.com/nureddinfarzaliyev' target='blank' className='flex items-center justify-between ml-3 px-4 w-[9rem] rounded-lg h-[3rem] bg-black opacity-60 hover:opacity-100 transition text-white font-bold shadow-md text-xl'>
                 <img src="/images/icon-github.svg" alt="" />
                 <p>GitHub</p>
